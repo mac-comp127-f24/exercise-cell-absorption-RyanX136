@@ -9,9 +9,6 @@ import java.util.Random;
 
 @SuppressWarnings("SameParameterValue")
 public class CellSimulation {
-    private static final double
-        WIGGLINESS = 0.2,
-        WANDER_FROM_CENTER = 60000;
 
     private CanvasWindow canvas;
     private Random rand = new Random();
@@ -45,17 +42,4 @@ public class CellSimulation {
         canvas.add(shape);
     }
 
-   
-
-    
-
-    
-    private static double sqr(double x) {
-        return x * x;
-    }
-
-    private static double normalizeRadians(double theta) {
-        double pi2 = Math.PI * 2;
-        return ((theta + Math.PI) % pi2 + pi2) % pi2 - Math.PI;
-    }
 }
